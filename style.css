@@ -1,3 +1,7 @@
+:root{
+    --colorDestaque: #bb820f;
+    --colorDestaqueVariante1: #bb820f3d;
+}
 *{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -9,24 +13,145 @@ body{
 }
 header{
     background-color: black;
-    height: 60px;
+    height: 70px;
+    z-index: 999;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 50%);
 }
 header ul{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 header li{
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
 }
 header li button{
     font-size: 1em;
     color: white;
     background: none;
     border: none;
-    padding: 14px 20px;
+    padding: 0px 20px;
     cursor: pointer;
+    height: 70px;
+    width: 100%;
+
+}
+header li button:hover{
+    background-color: var(--colorDestaqueVariante1);
 }
 header li img{
-    height: 60px;
+    height: 70px;
+    position: relative;
 }
+@keyframes estrelaHeader {
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+        width: 100%;
+
+    }
+    99%{
+        opacity: 0;
+        width: 0%;
+        z-index: 1;
+    }
+    100%{
+        width: 0%;
+        z-index: -1;
+
+    }
+}
+
+
+main{
+
+}
+main .cntrBanner{
+    background-color: rgba(0, 0, 0, 0.83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.cntrBanner img{
+    
+}
+.fundoHome{
+    z-index: -1;
+    width: 100%;
+}
+.logo{
+    width: 500px;
+    position: absolute;
+
+}
+.blurBranco{
+    width: 600px;
+    opacity: .2;
+    position: absolute;
+
+}
+.cntrBanner button{
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+    padding: 20px 40px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #3b3a39;
+    color: white;
+    cursor: pointer;
+}
+.cntrBanner button span{
+    color: var(--colorDestaque);
+}
+.cntrEstilo{
+    background-color: black;
+}
+.cntrEstilo h1{
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    header li button{
+        font-size: .9em;
+        padding: 10px 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .liImg{
+        animation: estrelaHeader 1s both;
+    }
+}
+  
+
