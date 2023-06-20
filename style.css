@@ -75,10 +75,11 @@ main .cntrBanner{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    position: relative;
 }
 .cntrBanner img{
     
@@ -138,7 +139,26 @@ main .cntrBanner{
 
 
 
-
+@media only screen and (max-width: 900px) {
+    .cntrBanner button {
+        bottom: 20px;
+        border-radius: 50px 0px 0px 50px;
+        padding: 14px 20px;
+    }
+    .logo {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .cntrEstilo h1 {
+        font-size: 1.6em;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .cntrBanner button {
+        display: none;
+    }
+}
 @media only screen and (max-width: 700px) {
     header li button{
         font-size: .9em;
@@ -148,6 +168,9 @@ main .cntrBanner{
 @media only screen and (max-width: 600px) {
     .liImg{
         animation: estrelaHeader 1s both;
+    }
+    .cntrEstilo h1 {
+        font-size: 1.3em;
     }
 }
   
