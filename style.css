@@ -8,6 +8,9 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    background-color: black;
+}
 header{
     background-color: black;
     height: 70px;
@@ -112,7 +115,7 @@ main .cntrBanner{
     color: white;
     cursor: pointer;
 }
-.cntrBanner button span{
+.destaqueOuro{
     color: var(--colorDestaque);
 }
 .cntrEstilo{
@@ -154,6 +157,97 @@ main .cntrBanner{
     font-size: .9em;
     margin-top: 10px;
 }
+.cntrTrabalhosBtnOrcamento{
+    padding: 10px 40px;
+    background-image: linear-gradient(180deg, black, #2a2929);
+    padding-bottom: 40px;
+    border-radius: 0px 0px 30px 30px;
+}
+.boxTrabalhos{
+    background-color: #393736;
+    border-radius: 30px;
+    color: white;
+    padding: 0px 10px;
+    margin-top: 40px;
+}
+.boxTrabalhos h1{
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+.boxTrabalhos h1 span{
+
+}
+.cntrImgTrabalhos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cntrImgTrabalhos img{
+    width: 25%;
+}
+.boxTrabalhos button{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+.cntrBtnOrcamento{
+    position: relative;
+    margin-top: 60px;
+}
+.cntrBtnOrcamento span:first-child{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e99400;
+    z-index: 1;
+    transform: rotate(-.8deg);
+    border-radius: 20px;
+
+}
+.cntrBtnOrcamento span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #704600;
+    z-index: 1;
+    transform: rotate(.8deg);
+    border-radius: 20px;
+}
+.cntrBtnOrcamento button{
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    background-color: #a46800;
+    border: none;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,6 +272,12 @@ main .cntrBanner{
     .boxTipoTattoo img {
         width: 80%;
     }
+    .boxTrabalhos h1, .cntrBtnOrcamento button {
+        font-size: 1.6em;
+    }
+    .boxTrabalhos button {
+        font-size: 1.3em;
+    }
 
 }
 
@@ -196,11 +296,17 @@ main .cntrBanner{
         width: 120px;
         min-width: 100px;
     }
-
+    .cntrImgTrabalhos img {
+        width: 33.33%;
+    }
 }
 @media only screen and (max-width: 800px) {
     .cntrEstilo h1 {
         font-size: 1.6em;
+    }
+    .boxTrabalhos h1 {
+        padding: 20px;
+        font-size: 1.5em;
     }
 }
 @media only screen and (max-width: 794px) {
@@ -222,6 +328,16 @@ main .cntrBanner{
         font-size: .9em;
         padding: 10px 20px;
     }
+    .cntrTrabalhosBtnOrcamento {
+        padding: 10px 20px;
+        padding-bottom: 20px;
+    }
+    .cntrBtnOrcamento button {
+        font-size: 1.4em;
+    }
+    .cntrBtnOrcamento {
+        margin-top: 30px;
+    }
 }
 @media only screen and (max-width: 600px) {
     .liImg{
@@ -233,11 +349,11 @@ main .cntrBanner{
     .logo {
         width: 300px;
     }
-    .cntrImgsTiposDeTatto {
+    .cntrBtnOrcamento button, .boxTrabalhos button{
+        font-size: 1em;
     }
-    .boxTipoTattoo {
-    }
-    .boxTipoTattoo img {
+    .boxTrabalhos h1 {
+        font-size: 1.2em;
     }
 }
 
