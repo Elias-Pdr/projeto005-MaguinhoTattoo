@@ -10,6 +10,7 @@
 }
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 header{
     background-color: black;
@@ -182,6 +183,7 @@ main .cntrBanner{
 .cntrImgTrabalhos{
     display: flex;
     flex-wrap: wrap;
+    background-color: #4f4f4f;
 }
 .cntrImgTrabalhos img{
     width: 25%;
@@ -198,11 +200,14 @@ main .cntrBanner{
     color: white;
     cursor: pointer;
 }
+.boxTrabalhos button:hover{
+    color: #e99400;
+}
 .cntrBtnOrcamento{
     position: relative;
     margin-top: 60px;
 }
-.cntrBtnOrcamento span:first-child{
+.spanClaro{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -212,7 +217,7 @@ main .cntrBanner{
     border-radius: 20px;
 
 }
-.cntrBtnOrcamento span:nth-child(2){
+.spanEscuro{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -232,13 +237,91 @@ main .cntrBanner{
     z-index: 2;
     position: relative;
     border-radius: 20px;
+    cursor: pointer;
+}
+.cntrBtnOrcamento button:hover{
+    background-image: linear-gradient(-90deg, #704600, #e99400);
 }
 
 
 
+.cntrSobreNos{
+    color: white;
+    background-color: #292828;
+    margin: 30px;
+    border-radius: 30px;
+}
+
+.cntrImgTextoSobreNos{
+    margin-top: 50px;
+}
+.sobreNosH1{
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.cntrSobreNosSemH1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 10px;
+    padding: 10px;
+}
+.cntrImgSobreNos{
+    position: relative;
+    margin: 20px;
+}
+.cntrImgSobreNos span{
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+.cntrImgSobreNos span:nth-child(1){
+    top: -10px;
+}
+.cntrImgSobreNos span:nth-child(2){
+    right: -10px;
+    bottom: -10px;
+}
+.cntrImgSobreNos span:nth-child(3){
+    left: -10px;
+    bottom: -10px;
+
+}
 
 
+.cntrImgSobreNos img{
+    border-radius: 50%;
+    position: relative;
+}
+.cntrImgSobreNos,
+.cntrImgSobreNos span:nth-child(1),
+.cntrImgSobreNos span:nth-child(2),
+.cntrImgSobreNos span:nth-child(3),
+.cntrImgSobreNos img{
+    width: 300px;
+    height: 300px;
+}
 
+.cntrTextoSobreNos{
+    padding: 10px;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.cntrTextoSobreNos h1{
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+.cntrTextoSobreNos p{
+    font-size: 1em;
+    line-height: 24px;
+}
 
 
 
@@ -299,6 +382,22 @@ main .cntrBanner{
     .cntrImgTrabalhos img {
         width: 33.33%;
     }
+    .cntrImgSobreNos, .cntrImgSobreNos span:nth-child(1), .cntrImgSobreNos span:nth-child(2), .cntrImgSobreNos span:nth-child(3), .cntrImgSobreNos img {
+        width: 200px;
+        height: 200px;
+    }
+    .sobreNosH1{
+        display: block;
+    }
+    .cntrTextoSobreNos h1 {
+        display: none;
+    }
+    .cntrTextoSobreNos {
+        padding: 10px;
+        width: 100%;
+        height: 200px;
+    }
+
 }
 @media only screen and (max-width: 800px) {
     .cntrEstilo h1 {
@@ -321,6 +420,12 @@ main .cntrBanner{
 @media only screen and (max-width: 720px) {
     .cntrBanner button {
         display: none;
+    }
+    .cntrSobreNosSemH1 {
+        flex-direction: column;
+    }
+    .cntrTextoSobreNos {
+        height: fit-content;
     }
 }
 @media only screen and (max-width: 700px) {
