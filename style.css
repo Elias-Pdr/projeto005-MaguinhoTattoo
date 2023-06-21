@@ -323,10 +323,104 @@ main .cntrBanner{
     line-height: 24px;
 }
 
+.cntrContatoInfos{
+    color: white;
+}
+.cntrContatoInfos > h1{
+    width: 100%;
+    text-align: center;
+    margin: 60px 0px 40px 0px;
+}
+.cntrContatoInfos > div{
+    display: flex;
+    color: #ccc;
+    justify-content: space-evenly;
+}
+.cntrHrFuncionamento{
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cntrHrFuncionamento h2{
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.cntrHorarios{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cntrHorarios p{
+    width: 50%;
+    margin-top: 10px;
+}
+.cntrHorarios p:last-child{
+    color: var(--colorDestaque);
+}
+.horario{
+    text-align: end;
+}
+.cntrContato{
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cntrContato h2{
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.cntrContato button{
+    width: 80%;
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #2a2929;
+}
 
 
-
-
+.cntrMapa{
+    margin: 30px;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #393736;
+    border-radius: 20px;
+}
+.cntrMapa >  span{
+    width: 100%;
+    display: flex;
+}
+.cntrMapa > div{
+    width: 500px;
+    height: 500px;
+    min-width: 500px;
+}
+.cntrMapa img{
+    height: 500px;
+    border-radius: 20px 0px 0px 20px;
+}
+.cntrMapa iframe{
+    width: 100%;
+    height: 500px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: black;
+}
+.cntrMapa p{
+    color: white;
+    margin-top: 10px;
+    line-height: 24px;
+}
+.enderecoLateral{
+    display: none;
+}
 
 
 
@@ -363,7 +457,40 @@ main .cntrBanner{
     }
 
 }
+@media only screen and (max-width: 920px) {
+    .enderecoAbaixo{
+        display: none;
+    }
+    .enderecoLateral{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cntrMapa > span {
+        flex-direction: column;
+    }
+    .cntrMapa span div{
+        display: flex;
+        background-color: #292828;
+        border-radius: 20px 20px 0px 0px;
+    }
 
+    .cntrMapa img {
+        height: 300px;
+        border-radius: 20px 0px 0px 0px;
+    }
+    .cntrMapa iframe {
+        border-radius: 0px 0px 20px 20px;
+    }
+    .cntrMapa p {
+        margin-top: 0px;
+        padding: 24px;
+    }
+    .cntrMapa iframe {
+        height: 350px;
+    }
+
+}
 @media only screen and (max-width: 900px) {
     .cntrBanner button {
         bottom: 20px;
@@ -427,6 +554,12 @@ main .cntrBanner{
     .cntrTextoSobreNos {
         height: fit-content;
     }
+    .cntrContato {
+        width: 40%;
+    }
+    .cntrHrFuncionamento{
+        width: 60%;
+    }
 }
 @media only screen and (max-width: 700px) {
     header li button{
@@ -443,6 +576,16 @@ main .cntrBanner{
     .cntrBtnOrcamento {
         margin-top: 30px;
     }
+    .cntrMapa img {
+        height: fit-content;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .cntrMapa span div {
+        flex-direction: column;
+    }
+
+    
 }
 @media only screen and (max-width: 620px) {
     .cntrImgsTiposDeTatto {
@@ -472,6 +615,22 @@ main .cntrBanner{
     }
     .boxTrabalhos h1 {
         font-size: 1.2em;
+    }
+    .cntrContatoInfos > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cntrHrFuncionamento{
+        width: 100%;
+        max-width: 80%;
+        margin-bottom: 60px;
+    }
+    .cntrContato button {
+        width: 100%;
+    }
+    .cntrContato {
+        width: 90%;
     }
 }
 
