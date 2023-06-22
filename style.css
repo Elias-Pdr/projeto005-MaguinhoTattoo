@@ -249,7 +249,8 @@ main .cntrBanner{
     color: white;
     background-color: #292828;
     margin: 30px;
-    border-radius: 30px;
+    margin-bottom: 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .cntrImgTextoSobreNos{
@@ -390,10 +391,10 @@ main .cntrBanner{
 
 .cntrMapa{
     margin: 30px;
-    margin-top: 60px;
+    margin-top: 0px;
     padding: 20px;
-    background-color: #393736;
-    border-radius: 20px;
+    background-color: #292828;
+    border-radius: 0px 0px 20px 20px;
 }
 .cntrMapa >  span{
     width: 100%;
@@ -423,7 +424,12 @@ main .cntrBanner{
     display: none;
 }
 
-
+.depoimentosH1{
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
 .cntrDepoimento{
     display: flex;
     overflow-x: scroll;
@@ -433,8 +439,9 @@ main .cntrBanner{
 }
 
 .boxDepoimento{
-    background-color: #ccc;
+    background-color: #999;
     margin: 50px 30px;
+    margin-bottom: 10px;
     padding: 20px;
     padding-bottom: 10px;
     width: 40%;
@@ -452,7 +459,7 @@ main .cntrBanner{
     align-items: center;
     justify-content: center;
     margin-right: 30px;
-    background-color: #999;
+    background-color: #bbb;
     padding: 10px 20px;
     border-radius: 50px;
 }
@@ -634,10 +641,11 @@ footer{
     }
     .cntrSobreNos {
         margin: 30px 10px;
+        margin-bottom: 0px;
     }
     .cntrMapa {
         margin: 30px 10px;
-        margin-top: 30px;
+        margin-top: 0px;
         padding: 10px;
     }
     .boxDepoimento {
