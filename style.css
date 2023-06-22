@@ -325,6 +325,7 @@ main .cntrBanner{
 
 .cntrContatoInfos{
     color: white;
+    margin-bottom: 40px;
 }
 .cntrContatoInfos > h1{
     width: 100%;
@@ -421,7 +422,15 @@ main .cntrBanner{
 .enderecoLateral{
     display: none;
 }
-
+footer{
+    background-color: #292828;
+    color: #ccc;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 100% 100% 0px 0px;
+    margin-top: 100px;
+}
 
 
 
