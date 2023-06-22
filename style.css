@@ -422,6 +422,100 @@ main .cntrBanner{
 .enderecoLateral{
     display: none;
 }
+
+
+.cntrDepoimento{
+    display: flex;
+    overflow-x: scroll;
+}
+.cntrDepoimento::-webkit-scrollbar{
+    height: 0px;
+}
+
+.boxDepoimento{
+    background-color: #ccc;
+    margin: 50px 30px;
+    padding: 20px;
+    padding-bottom: 10px;
+    width: 40%;
+    min-width: 500px;
+    border-radius: 20px;
+}
+.cntrNomeEavaliacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.cntrNomeInstaDepoimento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    background-color: #999;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.nomeInstaDepoimento{
+    font-size: 1em;
+    font-weight: bold;
+    color: #292828;
+}
+.cntrNomeInstaDepoimento svg{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
+
+}
+.cntrEstrelasDepoimento{
+    display: flex;
+    align-items: center;
+}
+.cntrEstrelasDepoimento svg{
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+}
+.cntrEstrelasDepoimento svg path{
+    fill: #e99400;
+}
+.textDepoimento{
+    font-size: 1em;
+    line-height: 24px;
+}
+.cntrImgDepoimento{
+    display: flex;
+    margin-top: 20px;
+}
+.cntrImgDepoimento span{
+    width: 50%;
+}
+.cntrImgDepoimento img{
+    width: 100%;
+}
+.cntrImgDepoimento p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.cntrBtnsImgDepoimento{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.cntrBtnsImgDepoimento button{
+    background: none;
+    border: none;
+    outline: none;
+}
+.cntrBtnsImgDepoimento svg{
+    width: 60px;
+    height: 60px;
+}
+
+
+
 footer{
     background-color: #292828;
     color: rgba(204, 204, 204, 0.7);
@@ -445,8 +539,12 @@ footer{
 
 
 
-
-
+@media only screen and (max-width: 1000px) {
+    .boxDepoimento {
+        width: 30%;
+        min-width: 450px;
+    }
+}
 @media only screen and (max-width: 980px) {
     .cntrImgsTiposDeTatto {
         flex-wrap: wrap;
@@ -542,7 +640,9 @@ footer{
         margin-top: 30px;
         padding: 10px;
     }
-
+    .boxDepoimento {
+        margin: 50px 20px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .cntrEstilo h1 {
