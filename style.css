@@ -8,6 +8,9 @@
     margin: 0px;
     padding: 0px;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     overflow-x: hidden;
@@ -31,7 +34,7 @@ header li{
     justify-content: center;
     height: 70px;
 }
-header li button{
+header li a{
     font-size: 1em;
     color: white;
     background: none;
@@ -40,9 +43,13 @@ header li button{
     cursor: pointer;
     height: 70px;
     width: 100%;
-
+    white-space: nowrap;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-header li button:hover{
+header li a:hover{
     background-color: var(--colorDestaqueVariante1);
 }
 header li img{
@@ -75,7 +82,7 @@ main{
 
 }
 main .cntrBanner{
-    background-color: rgba(0, 0, 0, 0.83);
+    background-color: rgba(0, 0, 0, 0.90);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,7 +338,8 @@ main .cntrBanner{
 .cntrContatoInfos > h1{
     width: 100%;
     text-align: center;
-    margin: 60px 0px 40px 0px;
+    margin: 0px 0px 40px 0px;
+    padding-top: 60px;
 }
 .cntrContatoInfos > div{
     display: flex;
@@ -415,10 +423,15 @@ main .cntrBanner{
     border-radius: 0px 20px 20px 0px;
     background-color: black;
 }
+
 .cntrMapa p{
     color: white;
     margin-top: 10px;
     line-height: 24px;
+}
+.cntrMapa p a{
+    color: blue;
+    margin-left: 10px;
 }
 .enderecoLateral{
     display: none;
@@ -428,7 +441,7 @@ main .cntrBanner{
     color: white;
     width: 100%;
     text-align: center;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 .cntrDepoimento{
     display: flex;
@@ -443,7 +456,6 @@ main .cntrBanner{
     margin: 50px 30px;
     margin-bottom: 10px;
     padding: 20px;
-    padding-bottom: 10px;
     width: 40%;
     min-width: 500px;
     border-radius: 20px;
@@ -515,12 +527,12 @@ main .cntrBanner{
     background: none;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 .cntrBtnsImgDepoimento svg{
     width: 60px;
     height: 60px;
 }
-
 
 
 footer{
@@ -532,6 +544,15 @@ footer{
     border-radius: 100% 100% 0px 0px;
     margin-top: 100px;
     font-size: .8em;
+    position: relative;
+}
+.borboleta{
+    position: absolute;
+    width: 500px;
+    bottom: 0px;
+    z-index: -1;
+    right: -200px;
+    opacity: .1;
 }
 
 
@@ -650,6 +671,7 @@ footer{
     }
     .boxDepoimento {
         margin: 50px 20px;
+        margin-bottom: 10px;
     }
 }
 @media only screen and (max-width: 800px) {

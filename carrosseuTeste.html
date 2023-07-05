@@ -1,0 +1,59 @@
+<div class="carousel">
+    <div class="carousel-inner">
+      <img src="img/estilos/estilo-_0008_Camada 0.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0001_Camada 9.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0002_Camada 7.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <img src="img/estilos/estilo-_0004_Camada 4.jpg" alt="Image 1">
+      <!-- Adicione mais imagens conforme necessário -->
+    </div>
+    <button id="nextButton">Next</button>
+    <button id="previousButton">Previous</button>
+</div>
+
+<style>
+    .carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+<script>
+    const carousel = document.querySelector('.carousel');
+const carouselInner = document.querySelector('.carousel-inner');
+
+let currentIndex = 0;
+const slideWidth = carousel.clientWidth;
+
+function nextSlide() {
+  currentIndex++;
+  carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+function previousSlide() {
+  currentIndex--;
+  carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Adicione event listeners aos botões de próximo e anterior
+document.getElementById('nextButton').addEventListener('click', nextSlide);
+document.getElementById('previousButton').addEventListener('click', previousSlide);
+
+</script>
