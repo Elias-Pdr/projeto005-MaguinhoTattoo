@@ -560,10 +560,16 @@ footer{
     flex-direction: column;
 }
 .addComentario{
-    width: 100%;
     color: #ccc;
     text-align: center;
     margin-top: 10px;
+}
+.comentarios > span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 
