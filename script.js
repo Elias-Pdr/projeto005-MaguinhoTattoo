@@ -10,9 +10,8 @@ function setaComentarios(direcao) {
                 scrollContainer.scrollLeft++
             }, 100);
         }
-
     }
-
+    
     if(direcao == "esquerda"){
         for (let i = 0; i < tamanhoMoviX; i++) {
             setTimeout(() => {
