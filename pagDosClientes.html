@@ -231,14 +231,16 @@
         let messageInput = document.getElementById('comentario');
         let bntSubmit = document.getElementById('submit');
         let message = document.getElementById('message');
+        let linkPerfil = ''
 
         function compiladorDeInfos(){
-            message.value = "<input id=&quot;htmlCopy&quot; value='" + "&lt;div class=&quot;boxDepoimento&quot;&gt;&lt;div class=&quot;cntrNomeEavaliacao&quot;&gt;&lt;div class=&quot;cntrNomeInstaDepoimento&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:svgjs=&quot;http://svgjs.com/svgjs&quot; width=&quot;512&quot; height=&quot;512&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 551.034 551.034&quot; style=&quot;enable-background:new 0 0 512 512&quot; xml:space=&quot;preserve&quot; class=&quot;&quot;&gt;&lt;g&gt;&lt;linearGradient id=&quot;a&quot; x1=&quot;275.517&quot; x2=&quot;275.517&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;path d=&quot;M386.878 0H164.156C73.64 0 0 73.64 0 164.156v222.722c0 90.516 73.64 164.156 164.156 164.156h222.722c90.516 0 164.156-73.64 164.156-164.156V164.156C551.033 73.64 477.393 0 386.878 0zM495.6 386.878c0 60.045-48.677 108.722-108.722 108.722H164.156c-60.045 0-108.722-48.677-108.722-108.722V164.156c0-60.046 48.677-108.722 108.722-108.722h222.722c60.045 0 108.722 48.676 108.722 108.722v222.722z&quot; style=&quot;fill:url(#a);&quot; fill=&quot;&quot;&gt;&lt;/path&gt;&lt;linearGradient id=&quot;b&quot; x1=&quot;275.517&quot; x2=&quot;275.517&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;path d=&quot;M275.517 133C196.933 133 133 196.933 133 275.516s63.933 142.517 142.517 142.517S418.034 354.1 418.034 275.516 354.101 133 275.517 133zm0 229.6c-48.095 0-87.083-38.988-87.083-87.083s38.989-87.083 87.083-87.083c48.095 0 87.083 38.988 87.083 87.083 0 48.094-38.989 87.083-87.083 87.083z&quot; style=&quot;fill:url(#b);&quot; fill=&quot;&quot;&gt;&lt;/path&gt;&lt;linearGradient id=&quot;c&quot; x1=&quot;418.31&quot; x2=&quot;418.31&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;circle cx=&quot;418.31&quot; cy=&quot;134.07&quot; r=&quot;34.15&quot; style=&quot;fill:url(#c);&quot; fill=&quot;&quot;&gt;&lt;/circle&gt;&lt;/g&gt;&lt;/svg&gt;" + "&lt;p class=&quot;nomeInstaDepoimento&quot;&gt;" + nameInput.value + "&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;cntrEstrelasDepoimento " + subjectInput.value + "&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;textDepoimento&quot;&gt;" + messageInput.value + "&lt;/p&gt;&lt;/div&gt;" + "'>"
-
+            message.value = "<input id=&quot;htmlCopy&quot; value='" + "&lt;div class=&quot;boxDepoimento&quot;&gt;&lt;div class=&quot;cntrNomeEavaliacao&quot;&gt;&lt;div class=&quot;cntrNomeInstaDepoimento&quot;&gt;&lt;a href=&quot;"+linkPerfil+"&quot; target=&quot;_blank&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:svgjs=&quot;http://svgjs.com/svgjs&quot; width=&quot;512&quot; height=&quot;512&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 551.034 551.034&quot; style=&quot;enable-background:new 0 0 512 512&quot; xml:space=&quot;preserve&quot; class=&quot;&quot;&gt;&lt;g&gt;&lt;linearGradient id=&quot;a&quot; x1=&quot;275.517&quot; x2=&quot;275.517&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;path d=&quot;M386.878 0H164.156C73.64 0 0 73.64 0 164.156v222.722c0 90.516 73.64 164.156 164.156 164.156h222.722c90.516 0 164.156-73.64 164.156-164.156V164.156C551.033 73.64 477.393 0 386.878 0zM495.6 386.878c0 60.045-48.677 108.722-108.722 108.722H164.156c-60.045 0-108.722-48.677-108.722-108.722V164.156c0-60.046 48.677-108.722 108.722-108.722h222.722c60.045 0 108.722 48.676 108.722 108.722v222.722z&quot; style=&quot;fill:url(#a);&quot; fill=&quot;&quot;&gt;&lt;/path&gt;&lt;linearGradient id=&quot;b&quot; x1=&quot;275.517&quot; x2=&quot;275.517&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;path d=&quot;M275.517 133C196.933 133 133 196.933 133 275.516s63.933 142.517 142.517 142.517S418.034 354.1 418.034 275.516 354.101 133 275.517 133zm0 229.6c-48.095 0-87.083-38.988-87.083-87.083s38.989-87.083 87.083-87.083c48.095 0 87.083 38.988 87.083 87.083 0 48.094-38.989 87.083-87.083 87.083z&quot; style=&quot;fill:url(#b);&quot; fill=&quot;&quot;&gt;&lt;/path&gt;&lt;linearGradient id=&quot;c&quot; x1=&quot;418.31&quot; x2=&quot;418.31&quot; y1=&quot;4.57&quot; y2=&quot;549.72&quot; gradientTransform=&quot;matrix(1 0 0 -1 0 554)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;0.6&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#42445a&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;stop stop-opacity=&quot;1&quot; stop-color=&quot;#292828&quot; offset=&quot;1&quot;&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;circle cx=&quot;418.31&quot; cy=&quot;134.07&quot; r=&quot;34.15&quot; style=&quot;fill:url(#c);&quot; fill=&quot;&quot;&gt;&lt;/circle&gt;&lt;/g&gt;&lt;/svg&gt;&lt;p class=&quot;nomeInstaDepoimento&quot;&gt;"+nameInput.value+"&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;cntrEstrelasDepoimento "+subjectInput.value+"&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;textDepoimento&quot;&gt;"+messageInput.value+"&lt;/p&gt;&lt;/div&gt;" + "'>"
         }
+        
 
         // Função para enviar o formulário sem atualizar a página
         function enviarFormulario(event) {
+            
             compiladorDeInfos()
 
             event.preventDefault(); // Impede o comportamento padrão de envio do formulário
@@ -382,6 +384,37 @@
             }
 
         }
+
+
+        // Função para extrair o nome de usuário do link do Instagram
+        function extrairNomeUsuarioInstagram(link) {
+            linkPerfil = nameInput.value;
+            const regex = /instagram\.com\/([A-Za-z0-9_.]+)/;
+            const matches = link.match(regex);
+
+            if (matches && matches.length > 1) {
+                return matches[1];
+            }
+
+            return null; // Retorna null se não encontrar um nome de usuário válido
+        }
+
+        // Função para atualizar o valor do input quando ele perder o foco
+        function atualizarValorDoInput() {
+
+            const instaInput = document.getElementById("nome");
+            const link = instaInput.value;
+            const nomeUsuario = extrairNomeUsuarioInstagram(link);
+
+
+            if (nomeUsuario) {
+                instaInput.value = "@" + nomeUsuario;
+            }
+        }
+
+        // Adiciona o evento blur ao input
+        const instaInput = document.getElementById("nome");
+        instaInput.addEventListener("blur", atualizarValorDoInput);
 
     </script>
 </body>

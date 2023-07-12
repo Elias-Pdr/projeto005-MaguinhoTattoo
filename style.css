@@ -474,17 +474,29 @@ main .cntrBanner{
     background-color: #bbb;
     padding: 10px 20px;
     border-radius: 50px;
+    cursor: pointer;
+}
+.cntrNomeInstaDepoimento:hover{
+    background-color: #ccc;
 }
 .nomeInstaDepoimento{
     font-size: 1em;
     font-weight: bold;
     color: #292828;
 }
+.cntrNomeInstaDepoimento a{
+    
+}
 .cntrNomeInstaDepoimento svg{
     width: 1.5em;
     height: 1.5em;
     margin-right: 10px;
 
+}
+.boxDepoimento a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 .cntrEstrelasDepoimento{
     display: flex;
@@ -502,21 +514,7 @@ main .cntrBanner{
     font-size: 1em;
     line-height: 24px;
 }
-.cntrImgDepoimento{
-    display: flex;
-    margin-top: 20px;
-}
-.cntrImgDepoimento span{
-    width: 50%;
-}
-.cntrImgDepoimento img{
-    width: 100%;
-}
-.cntrImgDepoimento p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
+
 .cntrBtnsImgDepoimento{
     width: 100%;
     display: flex;
