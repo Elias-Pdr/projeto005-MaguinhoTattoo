@@ -393,12 +393,16 @@
             const matches = link.match(regex);
 
             if (matches && matches.length > 1) {
+                document.querySelector(".cntrInputInsta").style.borderColor = "white"
                 return matches[1];
             }
 
-            return null; // Retorna null se não encontrar um nome de usuário válido
+            return usuarioInvalido(); // Retorna null se não encontrar um nome de usuário válido
         }
-
+        function usuarioInvalido(){
+            nameInput.value = "";
+            document.querySelector(".cntrInputInsta").style.borderColor = "red"
+        }
         // Função para atualizar o valor do input quando ele perder o foco
         function atualizarValorDoInput() {
 
